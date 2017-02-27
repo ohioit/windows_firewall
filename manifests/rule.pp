@@ -22,5 +22,5 @@ class windows_firewall::rule(
         action                 => 1,
         edge_traversal_options => 0,
     }
-    create_resources(firewall_rule, hiera_hash($rule_key), $defaults)
+    create_resources(firewall_rule, hiera_hash($rule_key, {}), $defaults)
 }
