@@ -10,7 +10,7 @@ class windows_firewall (
 ){
     if $::osfamily == 'windows' {
       case $::operatingsystemmajrelease {
-          /(2008|2008 R2|2012|2012 R2)/: {
+          /(2008|2008 R2|2012|2012 R2|2016)/: {
               $firewall_name = 'MpsSvc'
 
               service { 'windows_firewall':
